@@ -1,0 +1,11 @@
+textarea {
+    min-height: 400px;
+}
+
+
+
+.list-group-item:hover {
+background-color: #ffffff; /* white background on hover */
+cursor: pointer; /* Change cursor to pointer on hover */
+}
+
