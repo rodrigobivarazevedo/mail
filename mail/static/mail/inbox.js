@@ -210,7 +210,6 @@ function load_mailbox(mailbox) {
 
 
 
-
 function archiveEmail(emailId, newArchiveState, targetmailbox) {
   // Determine the target mailbox based on the newArchiveState
   //const targetMailbox = newArchiveState ? 'inbox' : 'archive';
