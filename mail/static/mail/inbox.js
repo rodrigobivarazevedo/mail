@@ -34,8 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
 function compose_email(recipients) {
-  history.pushState({compose: true, recipients: recipients}, '', 'compose'); 
+  history.pushState({compose: true, recipients: recipients}, '', ''); 
   // Show compose view and hide other views
   document.querySelector('#emails-view').style.display = 'none';
   document.querySelector('#compose-view').style.display = 'block';
@@ -103,7 +104,7 @@ function compose_email(recipients) {
 }
 
 function load_mailbox(mailbox) {
-  history.pushState({mailbox: mailbox}, '', `/emails/${mailbox}`);
+  history.pushState({mailbox: mailbox}, '', "");
   // Show the mailbox and hide other views
   document.querySelector('#compose-view').style.display = 'none';
   document.querySelector('#emails-view').style.display = 'block';
@@ -191,7 +192,7 @@ function load_mailbox(mailbox) {
 }
 
 function display_email(mailbox, emailId) {
-  history.pushState({mailbox: mailbox, emailId: emailId}, '', `/emails/${emailId}`);
+  history.pushState({mailbox: mailbox, emailId: emailId}, '', "");
   
   fetch(`/emails/${emailId}`)
     .then(response => response.json())
